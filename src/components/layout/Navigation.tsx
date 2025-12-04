@@ -1,9 +1,11 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useState } from 'react';
 import { NAV_ITEMS, BRAND_NAME } from '@/constants/navigation';
+import { useTheme } from '@/contexts/ThemeContext';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
@@ -14,8 +16,8 @@ export function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <div className="hidden md:flex md:items-center md:space-x-8">
+            <div className="flex items-baseline space-x-8">
               {NAV_ITEMS.map((item) => (
                 <a
                   key={item.label}
@@ -26,10 +28,24 @@ export function Navigation() {
                 </a>
               ))}
             </div>
+            <button
+              onClick={toggleTheme}
+              className="text-slate-300 hover:text-emerald-400 transition-colors p-2"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-4">
+            <button
+              onClick={toggleTheme}
+              className="text-slate-300 hover:text-emerald-400 transition-colors p-2"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-slate-300 hover:text-emerald-400"

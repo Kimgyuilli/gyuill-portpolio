@@ -8,20 +8,23 @@ import { Achievements } from '@/components/sections/Achievements';
 import { Experience } from '@/components/sections/Experience';
 import { Blog } from '@/components/sections/Blog';
 import { Contact } from '@/components/sections/Contact';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 
 export default function App() {
   return (
-    <div className="bg-slate-950 min-h-screen text-slate-100">
-      <Navigation />
-      <Hero />
-      <Stats />
-      <About />
-      <Skills />
-      <Projects />
-      <Achievements />
-      <Experience />
-      <Blog />
-      <Contact />
-    </div>
+    <ThemeProvider>
+      <div className="bg-slate-950 dark:bg-slate-950 min-h-screen text-slate-100 dark:text-slate-100">
+        <Navigation />
+        <Hero />
+        <Stats />
+        <About />
+        <Skills />
+        <Projects />
+        <Achievements />
+        <Experience />
+        <Blog />
+        <Contact />
+      </div>
+    </ThemeProvider>
   );
 }
