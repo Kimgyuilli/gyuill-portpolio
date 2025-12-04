@@ -16,8 +16,8 @@ export function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
-            <div className="flex items-baseline space-x-8">
+          <div className="flex items-center space-x-8 max-md:hidden">
+            <div className="flex items-center space-x-6">
               {NAV_ITEMS.map((item) => (
                 <a
                   key={item.label}
