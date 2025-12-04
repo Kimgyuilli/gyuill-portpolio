@@ -35,7 +35,10 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <a href="#home" className="text-emerald-600 dark:text-emerald-400 font-bold text-xl hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors">
+            <a
+              href="#home"
+              className="text-emerald-600 dark:text-emerald-400 font-bold text-xl hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors"
+            >
               {BRAND_NAME}
             </a>
           </div>
