@@ -25,6 +25,36 @@ npm run build
 ```
 Build output goes to the `build` directory (configured in vite.config.ts).
 
+### Code Quality Checks
+```bash
+npm run lint              # Run ESLint (must pass with 0 warnings)
+npm run lint:fix          # Auto-fix ESLint issues
+npm run format:check      # Check Prettier formatting
+npm run format            # Auto-format code with Prettier
+```
+
+## Development Workflow Guidelines
+
+**IMPORTANT: After completing each development unit (feature, bug fix, or task), you MUST:**
+
+1. **Run Lint Check**: Execute `npm run lint` to ensure code quality
+   - All warnings must be resolved (max-warnings=0)
+   - Fix any ESLint errors before proceeding
+
+2. **Run Build**: Execute `npm run build` to verify production build
+   - Ensure the build completes without errors
+   - Verify TypeScript type checking passes
+
+3. **Check Formatting**: Execute `npm run format:check` to verify code formatting
+   - Use `npm run format` to auto-fix formatting issues if needed
+
+4. **DO NOT Start Dev Server Automatically**
+   - Do not run `npm run dev` unless explicitly requested by the user
+   - The user will manually start the dev server when ready to test
+   - Focus on automated checks (lint, build, format) instead
+
+**Quality Gate**: No code should be considered complete until it passes all three checks (lint, build, format).
+
 ## Architecture
 
 ### Technology Stack
@@ -47,9 +77,10 @@ Single-page application with a clean, modular component hierarchy:
 src/
 ├── components/
 │   ├── layout/           # Layout components (Navigation)
-│   ├── sections/         # Page sections (Hero, About, Skills, Projects, Experience, Contact)
-│   └── common/           # Reusable components (ProjectCard, SkillCard, ExperienceItem, etc.)
-├── data/                 # Data definitions (projects, skills, experiences, contact)
+│   ├── sections/         # Page sections (Hero, About, Skills, Projects, Experience, Contact, Achievements, Blog, Stats)
+│   └── common/           # Reusable components (ProjectCard, SkillCard, ExperienceItem, ContactInfoItem, SocialLink, etc.)
+├── contexts/             # React contexts (ThemeContext for dark/light mode)
+├── data/                 # Data definitions (projects, skills, experiences, contact, achievements, blog, stats, hero)
 ├── types/                # TypeScript type definitions
 ├── constants/            # App constants (navigation items, etc.)
 ├── lib/                  # Utility functions (cn helper, etc.)
