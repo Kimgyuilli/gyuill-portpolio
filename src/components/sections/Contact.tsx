@@ -1,5 +1,19 @@
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
+import { Send, Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
+import { ContactInfoItem } from '@/components/common/ContactInfoItem';
+import { SocialLink } from '@/components/common/SocialLink';
+import { contactInfoData, socialLinksData } from '@/data/contact';
+
+const contactIconMap = {
+  '이메일': <Mail size={20} />,
+  '전화번호': <Phone size={20} />,
+  '위치': <MapPin size={20} />,
+} as const;
+
+const socialIconMap = {
+  'GitHub': <Github size={20} />,
+  'LinkedIn': <Linkedin size={20} />,
+} as const;
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -10,7 +24,6 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // 폼 제출 로직 (실제로는 백엔드 API 호출)
     alert('메시지가 전송되었습니다!');
     setFormData({ name: '', email: '', message: '' });
   };
@@ -36,58 +49,31 @@ export function Contact() {
           {/* Contact Info */}
           <div>
             <h3 className="mb-6 text-slate-100">연락처 정보</h3>
-            
+
             <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-4 text-slate-300">
-                <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400">
-                  <Mail size={20} />
-                </div>
-                <div>
-                  <p>이메일</p>
-                  <a href="mailto:example@email.com" className="text-slate-400 hover:text-emerald-400">
-                    your.email@example.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 text-slate-300">
-                <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <p>전화번호</p>
-                  <a href="tel:+821012345678" className="text-slate-400 hover:text-emerald-400">
-                    +82 10-1234-5678
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 text-slate-300">
-                <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400">
-                  <MapPin size={20} />
-                </div>
-                <div>
-                  <p>위치</p>
-                  <p className="text-slate-400">서울, 대한민국</p>
-                </div>
-              </div>
+              {contactInfoData.map((info, index) => (
+                <ContactInfoItem
+                  key={index}
+                  info={{
+                    ...info,
+                    icon: contactIconMap[info.label as keyof typeof contactIconMap]
+                  }}
+                />
+              ))}
             </div>
 
             <div>
               <h4 className="mb-4 text-slate-100">소셜 미디어</h4>
               <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-slate-800 hover:bg-emerald-500/20 rounded-lg flex items-center justify-center text-slate-400 hover:text-emerald-400 transition-all"
-                >
-                  <Github size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-slate-800 hover:bg-emerald-500/20 rounded-lg flex items-center justify-center text-slate-400 hover:text-emerald-400 transition-all"
-                >
-                  <Linkedin size={20} />
-                </a>
+                {socialLinksData.map((link, index) => (
+                  <SocialLink
+                    key={index}
+                    link={{
+                      ...link,
+                      icon: socialIconMap[link.label as keyof typeof socialIconMap]
+                    }}
+                  />
+                ))}
               </div>
             </div>
           </div>

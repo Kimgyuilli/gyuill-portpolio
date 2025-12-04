@@ -1,4 +1,4 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ImageWithFallback } from '@/components/common/ImageWithFallback';
 
 export function About() {
   return (
@@ -8,7 +8,7 @@ export function About() {
           <div>
             <h2 className="mb-6 text-slate-100">About Me</h2>
             <p className="text-slate-300 mb-4">
-              안녕하세요! 저는 열정적인 IT 개발자입니다. 
+              안녕하세요! 저는 열정적인 IT 개발자입니다.
               새로운 기술을 배우고 혁신적인 솔루션을 만드는 것을 좋아합니다.
             </p>
             <p className="text-slate-300 mb-4">
@@ -19,7 +19,7 @@ export function About() {
               팀워크를 중시하며, 지속적인 학습과 성장을 통해 더 나은 개발자가 되기 위해 노력하고 있습니다.
             </p>
           </div>
-          
+
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden border-2 border-emerald-500/20">
               <ImageWithFallback
