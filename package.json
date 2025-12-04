@@ -2,6 +2,7 @@
       "name": "IT Developer Portfolio Template",
       "version": "0.1.0",
       "private": true,
+      "type": "module",
       "dependencies": {
             "@radix-ui/react-accordion": "^1.2.3",
             "@radix-ui/react-alert-dialog": "^1.1.6",
@@ -47,15 +48,31 @@
             "vaul": "^1.1.2"
       },
       "devDependencies": {
+            "@eslint/js": "^9.39.1",
             "@types/node": "^20.10.0",
             "@types/react": "^19.2.7",
             "@types/react-dom": "^19.2.3",
+            "@typescript-eslint/eslint-plugin": "^8.48.1",
+            "@typescript-eslint/parser": "^8.48.1",
             "@vitejs/plugin-react-swc": "^3.10.2",
+            "eslint": "^9.39.1",
+            "eslint-config-prettier": "^10.1.8",
+            "eslint-plugin-prettier": "^5.5.4",
+            "eslint-plugin-react": "^7.37.5",
+            "eslint-plugin-react-hooks": "^7.0.1",
+            "eslint-plugin-react-refresh": "^0.4.24",
+            "globals": "^16.5.0",
+            "prettier": "^3.7.4",
             "typescript": "^5.9.3",
+            "typescript-eslint": "^8.48.1",
             "vite": "6.3.5"
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build"
+            "build": "vite build",
+            "lint": "eslint . --max-warnings=0",
+            "lint:fix": "eslint . --fix",
+            "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+            "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\""
       }
 }
