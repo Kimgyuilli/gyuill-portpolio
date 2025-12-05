@@ -19,9 +19,9 @@ export function Skills() {
 
         <FadeInSection delay={0.2}>
           <div className={styles.grid}>
-            {skillCategories.map((category, index) => (
+            {skillCategories.map((category) => (
               <SkillCard
-                key={index}
+                key={category.title}
                 category={{
                   ...category,
                   icon: SKILL_ICONS[category.title as SkillIconKey],

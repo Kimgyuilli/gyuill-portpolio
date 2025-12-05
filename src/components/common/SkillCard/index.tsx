@@ -11,8 +11,8 @@ export function SkillCard({ category }: SkillCardProps) {
       <div className={styles.icon}>{category.icon}</div>
       <h3 className={styles.title}>{category.title}</h3>
       <div className={styles['skills-list']}>
-        {category.skills.map((skill, skillIndex) => (
-          <span key={skillIndex} className={styles['skill-tag']}>
+        {category.skills.map((skill) => (
+          <span key={skill} className={styles['skill-tag']}>
             {skill}
           </span>
         ))}
