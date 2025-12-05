@@ -17,6 +17,11 @@ export interface Education {
   details?: string;
 }
 
+export interface AboutInfo {
+  paragraphs: string[];
+  workspaceImage?: string;
+}
+
 export interface HeroData {
   name: string;
   role: string;
@@ -31,6 +36,7 @@ export interface HeroData {
     linkedin: string;
     blog: string;
   };
+  about: AboutInfo;
   education: Education[];
   highlights: HeroHighlight[];
   stats: HeroStat[];
@@ -49,6 +55,15 @@ export const heroData: HeroData = {
     github: 'https://github.com/yourusername',
     linkedin: 'https://linkedin.com/in/yourusername',
     blog: 'https://yourblog.com',
+  },
+  about: {
+    paragraphs: [
+      '안녕하세요! 저는 열정적인 IT 개발자입니다. 새로운 기술을 배우고 혁신적인 솔루션을 만드는 것을 좋아합니다.',
+      '웹 개발, 모바일 앱 개발, 그리고 시스템 아키텍처 설계에 전문성을 가지고 있으며, 사용자 중심의 직관적인 제품을 만드는 데 집중하고 있습니다.',
+      '팀워크를 중시하며, 지속적인 학습과 성장을 통해 더 나은 개발자가 되기 위해 노력하고 있습니다.',
+    ],
+    workspaceImage:
+      'https://images.unsplash.com/photo-1566915896913-549d796d2166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjB3b3Jrc3BhY2UlMjBjb2Rpbmd8ZW58MXx8fHwxNzY0NzQzNjE5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
   },
   education: [
     {

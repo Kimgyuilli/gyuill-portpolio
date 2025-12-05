@@ -79,6 +79,18 @@ export function Hero() {
 
           {/* ==================== 중앙 칼럼 ==================== */}
           <div className={styles['center-column']}>
+            {/* About Me (최상단) */}
+            <div className={styles['about-section']}>
+              <h2 className={styles['section-title']}>About Me</h2>
+              <div className={styles['about-paragraphs']}>
+                {heroData.about.paragraphs.map((paragraph, index) => (
+                  <p key={index} className={styles['about-paragraph']}>
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+
             {/* 학력과 교육이력 */}
             <div>
               <h2 className={styles['section-title']}>학력과 교육이력</h2>

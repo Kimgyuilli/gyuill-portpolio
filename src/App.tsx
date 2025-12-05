@@ -1,6 +1,5 @@
 import { Navigation } from '@/components/layout/Navigation';
 import { Hero } from '@/components/sections/Hero';
-import { About } from '@/components/sections/About';
 import { Skills } from '@/components/sections/Skills';
 import { Projects } from '@/components/sections/Projects';
 import { Achievements } from '@/components/sections/Achievements';
@@ -15,7 +14,6 @@ export default function App() {
       <div className="bg-slate-50 dark:bg-slate-950 min-h-screen text-slate-900 dark:text-slate-100 transition-colors duration-200">
         <Navigation />
         <Hero />
-        <About />
         <Skills />
         <Projects />
         <Achievements />
