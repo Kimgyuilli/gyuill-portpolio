@@ -20,9 +20,6 @@ declare const styles: {
   readonly 'about-section': string;
   readonly 'about-paragraphs': string;
   readonly 'about-paragraph': string;
-  readonly 'workspace-image-wrapper': string;
-  readonly 'workspace-image': string;
-  readonly 'workspace-glow': string;
   readonly 'section-title': string;
   readonly 'timeline-list': string;
   readonly 'timeline-item': string;

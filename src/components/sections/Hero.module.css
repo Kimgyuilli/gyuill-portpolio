@@ -125,40 +125,12 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 .about-paragraph {
   color: rgb(203, 213, 225);
   font-size: 0.875rem;
   line-height: 1.6;
-}
-
-.workspace-image-wrapper {
-  border-radius: 1rem;
-  overflow: hidden;
-  border: 2px solid rgba(52, 211, 153, 0.2);
-  position: relative;
-}
-
-.workspace-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.workspace-glow {
-  position: absolute;
-  bottom: -2rem;
-  right: -2rem;
-  width: 16rem;
-  height: 16rem;
-  background: rgba(52, 211, 153, 0.1);
-  border-radius: 50%;
-  filter: blur(3rem);
-  z-index: -1;
-  pointer-events: none;
 }
 
 .section-title {
