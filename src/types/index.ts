@@ -26,6 +26,7 @@ export interface Experience {
   position: string;
   period: string;
   description: string[];
+  type: 'career' | 'activity';
 }
 
 export interface ContactInfo {

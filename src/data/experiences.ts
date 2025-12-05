@@ -11,6 +11,7 @@ export const experiences: Experience[] = [
       'Node.js 기반 백엔드 API 개발 및 최적화',
       '신규 팀원 멘토링 및 코드 리뷰',
     ],
+    type: 'career',
   },
   {
     company: 'Startup B',
@@ -22,6 +23,7 @@ export const experiences: Experience[] = [
       'AWS 인프라 구축 및 관리',
       '데이터베이스 스키마 설계',
     ],
+    type: 'activity',
   },
   {
     company: 'IT Company C',
@@ -33,5 +35,6 @@ export const experiences: Experience[] = [
       '단위 테스트 및 통합 테스트 작성',
       'Git을 활용한 버전 관리',
     ],
+    type: 'activity',
   },
 ];
