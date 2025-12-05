@@ -5,6 +5,8 @@ import { projects } from '@/data/projects';
 import { skillCategories } from '@/data/skills';
 import styles from './styles.module.css';
 
+type SkillLevel = 'primary' | 'secondary' | 'tertiary';
+
 export function Hero() {
   // 프로젝트는 최대 3개만 표시
   const featuredProjects = projects.slice(0, 3);
@@ -18,7 +20,7 @@ export function Hero() {
   );
 
   // 스킬 레벨 분류 (임시로 카테고리 기반)
-  const getSkillLevel = (category: string) => {
+  const getSkillLevel = (category: string): SkillLevel => {
     if (category === 'Frontend' || category === 'Mobile') return 'primary';
     if (category === 'Backend' || category === 'Database') return 'secondary';
     return 'tertiary';
