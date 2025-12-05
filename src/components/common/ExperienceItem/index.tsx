@@ -1,6 +1,6 @@
 import { Briefcase, Calendar } from 'lucide-react';
 import type { Experience } from '@/types';
-import styles from './ExperienceItem.module.css';
+import styles from './styles.module.css';
 
 interface ExperienceItemProps {
   experience: Experience;

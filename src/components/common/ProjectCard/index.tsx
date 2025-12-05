@@ -1,7 +1,7 @@
 import { ExternalLink, Github } from 'lucide-react';
-import { ImageWithFallback } from './ImageWithFallback';
+import { ImageWithFallback } from '../ImageWithFallback';
 import type { Project } from '@/types';
-import styles from './ProjectCard.module.css';
+import styles from './styles.module.css';
 
 interface ProjectCardProps {
   project: Project;
@@ -11,11 +11,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className={styles['project-card']}>
       <div className={styles['image-container']}>
-        <ImageWithFallback
-          src={project.image}
-          alt={project.title}
-          className={styles.image}
-        />
+        <ImageWithFallback src={project.image} alt={project.title} className={styles.image} />
       </div>
 
       <div className={styles.content}>

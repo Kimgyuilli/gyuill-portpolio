@@ -4,8 +4,13 @@ import { ContactInfoItem } from '@/components/common/ContactInfoItem';
 import { SocialLink } from '@/components/common/SocialLink';
 import { FadeInSection } from '@/components/common/FadeInSection';
 import { contactInfoData, socialLinksData } from '@/data/contact';
-import { CONTACT_ICONS, SOCIAL_ICONS, type ContactIconKey, type SocialIconKey } from '@/constants/contactIcons';
-import styles from './Contact.module.css';
+import {
+  CONTACT_ICONS,
+  SOCIAL_ICONS,
+  type ContactIconKey,
+  type SocialIconKey,
+} from '@/constants/contactIcons';
+import styles from './styles.module.css';
 
 export function Contact() {
   const [formData, setFormData] = useState({

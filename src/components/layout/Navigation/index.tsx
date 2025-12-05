@@ -2,7 +2,7 @@ import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { NAV_ITEMS, BRAND_NAME } from '@/constants/navigation';
 import { useTheme } from '@/contexts/ThemeContext';
-import styles from './Navigation.module.css';
+import styles from './styles.module.css';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);

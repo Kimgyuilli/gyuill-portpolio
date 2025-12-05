@@ -1,7 +1,7 @@
 import { BlogCard } from '@/components/common/BlogCard';
 import { FadeInSection } from '@/components/common/FadeInSection';
 import { blogPosts } from '@/data/blog';
-import styles from './Blog.module.css';
+import styles from './styles.module.css';
 
 export function Blog() {
   return (

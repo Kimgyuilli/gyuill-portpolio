@@ -1,7 +1,7 @@
 import { ExperienceItem } from '@/components/common/ExperienceItem';
 import { FadeInSection } from '@/components/common/FadeInSection';
 import { experiences } from '@/data/experiences';
-import styles from './Experience.module.css';
+import styles from './styles.module.css';
 
 export function Experience() {
   return (

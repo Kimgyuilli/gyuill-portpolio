@@ -1,6 +1,6 @@
 import { Achievement } from '@/types';
 import { ExternalLink } from 'lucide-react';
-import styles from './AchievementCard.module.css';
+import styles from './styles.module.css';
 
 interface AchievementCardProps {
   achievement: Achievement;

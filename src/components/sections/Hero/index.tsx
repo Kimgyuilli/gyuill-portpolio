@@ -3,7 +3,7 @@ import { heroData } from '@/data/hero';
 import { experiences } from '@/data/experiences';
 import { projects } from '@/data/projects';
 import { skillCategories } from '@/data/skills';
-import styles from './Hero.module.css';
+import styles from './styles.module.css';
 
 export function Hero() {
   // 프로젝트는 최대 3개만 표시
@@ -240,9 +240,7 @@ export function Hero() {
               {/* 스킬 레벨 범례 */}
               <div className={styles['skills-legend']}>
                 <div className={styles['legend-item']}>
-                  <div
-                    className={`${styles['legend-box']} ${styles['legend-box-primary']}`}
-                  ></div>
+                  <div className={`${styles['legend-box']} ${styles['legend-box-primary']}`}></div>
                   <span className={styles['legend-text']}>주요 언어</span>
                 </div>
                 <div className={styles['legend-item']}>
@@ -252,9 +250,7 @@ export function Hero() {
                   <span className={styles['legend-text']}>실전 경험</span>
                 </div>
                 <div className={styles['legend-item']}>
-                  <div
-                    className={`${styles['legend-box']} ${styles['legend-box-tertiary']}`}
-                  ></div>
+                  <div className={`${styles['legend-box']} ${styles['legend-box-tertiary']}`}></div>
                   <span className={styles['legend-text']}>기타</span>
                 </div>
               </div>

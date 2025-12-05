@@ -2,7 +2,7 @@ import { AchievementCard } from '@/components/common/AchievementCard';
 import { FadeInSection } from '@/components/common/FadeInSection';
 import { achievements } from '@/data/achievements';
 import { ACHIEVEMENT_ICONS, DEFAULT_ACHIEVEMENT_ICON } from '@/constants/achievementIcons';
-import styles from './Achievements.module.css';
+import styles from './styles.module.css';
 
 export function Achievements() {
   return (

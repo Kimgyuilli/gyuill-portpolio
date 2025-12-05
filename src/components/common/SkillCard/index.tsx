@@ -1,5 +1,5 @@
 import type { SkillCategory } from '@/types';
-import styles from './SkillCard.module.css';
+import styles from './styles.module.css';
 
 interface SkillCardProps {
   category: SkillCategory;

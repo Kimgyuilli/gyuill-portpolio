@@ -3,7 +3,7 @@ import { ProjectCard } from '@/components/common/ProjectCard';
 import { FadeInSection } from '@/components/common/FadeInSection';
 import { projects } from '@/data/projects';
 import { PROJECT_CATEGORIES, type ProjectCategory } from '@/constants/projectCategories';
-import styles from './Projects.module.css';
+import styles from './styles.module.css';
 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('All');

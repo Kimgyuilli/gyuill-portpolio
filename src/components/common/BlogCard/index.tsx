@@ -1,7 +1,7 @@
 import { BlogPost } from '@/types';
 import { Calendar, Clock, ExternalLink } from 'lucide-react';
-import { ImageWithFallback } from './ImageWithFallback';
-import styles from './BlogCard.module.css';
+import { ImageWithFallback } from '../ImageWithFallback';
+import styles from './styles.module.css';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -9,18 +9,9 @@ interface BlogCardProps {
 
 export function BlogCard({ post }: BlogCardProps) {
   return (
-    <a
-      href={post.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={styles['blog-card']}
-    >
+    <a href={post.link} target="_blank" rel="noopener noreferrer" className={styles['blog-card']}>
       <div className={styles['image-container']}>
-        <ImageWithFallback
-          src={post.image}
-          alt={post.title}
-          className={styles.image}
-        />
+        <ImageWithFallback src={post.image} alt={post.title} className={styles.image} />
       </div>
       <div className={styles.content}>
         <div className={styles.meta}>

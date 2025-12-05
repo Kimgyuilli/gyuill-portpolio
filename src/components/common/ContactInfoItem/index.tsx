@@ -1,5 +1,5 @@
 import type { ContactInfo } from '@/types';
-import styles from './ContactInfoItem.module.css';
+import styles from './styles.module.css';
 
 interface ContactInfoItemProps {
   info: ContactInfo;
