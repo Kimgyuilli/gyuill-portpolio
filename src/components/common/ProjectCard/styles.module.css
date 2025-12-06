@@ -4,11 +4,13 @@
   border-radius: 0.75rem;
   overflow: hidden;
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .project-card:hover {
   border-color: rgba(52, 211, 153, 0.5);
   transform: translateY(-0.25rem);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
 .image-container {

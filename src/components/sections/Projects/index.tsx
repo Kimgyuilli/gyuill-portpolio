@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { ProjectCard } from '@/components/common/ProjectCard';
+import { ProjectModal } from '@/components/common/ProjectModal';
 import { FadeInSection } from '@/components/common/FadeInSection';
 import { projects } from '@/data/projects';
 import { PROJECT_CATEGORIES, type ProjectCategory } from '@/constants/projectCategories';
+import type { Project } from '@/types';
 import styles from './styles.module.css';
 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('All');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filteredProjects =
     selectedCategory === 'All'
@@ -45,11 +48,20 @@ export function Projects() {
         <FadeInSection delay={0.2}>
           <div className={styles.grid}>
             {filteredProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
+              <ProjectCard
+                key={project.title}
+                project={project}
+                onClick={() => setSelectedProject(project)}
+              />
             ))}
           </div>
         </FadeInSection>
       </div>
+
+      {/* 모달 */}
+      {selectedProject && (
+        <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </section>
   );
 }

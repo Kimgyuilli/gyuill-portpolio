@@ -15,6 +15,19 @@ export interface Project {
   github: string;
   demo: string;
   category: Exclude<ProjectCategory, 'All'>;
+  detailedDescription?: string;
+  features?: string[];
+  techStack?: {
+    frontend?: string[];
+    backend?: string[];
+    database?: string[];
+    deployment?: string[];
+  };
+  challenges?: string[];
+  outcome?: string;
+  duration?: string;
+  teamSize?: string;
+  role?: string;
 }
 
 export interface SkillCategory {

@@ -87,36 +87,37 @@
 
 .nav-link {
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  transition: all 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
-  color: rgb(51, 65, 85);
+  color: rgb(100, 116, 139);
 }
 
 :global(.dark) .nav-link {
-  color: rgb(203, 213, 225);
+  color: rgb(148, 163, 184);
 }
 
 .nav-link:hover {
   color: rgb(5, 150, 105);
-  background-color: rgb(241, 245, 249);
+  transform: scale(1.05);
 }
 
 :global(.dark) .nav-link:hover {
   color: rgb(52, 211, 153);
-  background-color: rgba(30, 41, 59, 0.5);
+  transform: scale(1.05);
 }
 
 .nav-link-active {
   color: rgb(5, 150, 105);
-  background-color: rgb(236, 253, 245);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 :global(.dark) .nav-link-active {
   color: rgb(52, 211, 153);
-  background-color: rgba(52, 211, 153, 0.1);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .divider {
