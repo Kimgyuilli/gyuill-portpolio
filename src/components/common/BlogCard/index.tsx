@@ -33,8 +33,8 @@ export function BlogCard({ post }: BlogCardProps) {
         <p className={styles.summary}>{post.summary}</p>
         {post.tags && post.tags.length > 0 && (
           <div className={styles.tags}>
-            {post.tags.map((tag, index) => (
-              <span key={index} className={styles.tag}>
+            {post.tags.map((tag) => (
+              <span key={tag} className={styles.tag}>
                 {tag}
               </span>
             ))}
