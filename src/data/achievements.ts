@@ -1,6 +1,12 @@
-import { Achievement } from '@/types';
+export interface AchievementData {
+  title: string;
+  issuer: string;
+  date: string;
+  description?: string;
+  link?: string;
+}
 
-export const achievements: Omit<Achievement, 'icon'>[] = [
+export const achievements: AchievementData[] = [
   {
     title: 'AWS Certified Solutions Architect',
     issuer: 'Amazon Web Services',

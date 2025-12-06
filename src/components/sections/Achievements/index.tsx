@@ -17,9 +17,9 @@ export function Achievements() {
 
         <FadeInSection delay={0.2}>
           <div className={styles.grid}>
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievement) => (
               <AchievementCard
-                key={index}
+                key={achievement.title}
                 achievement={{
                   ...achievement,
                   icon: ACHIEVEMENT_ICONS[achievement.title] || DEFAULT_ACHIEVEMENT_ICON,
