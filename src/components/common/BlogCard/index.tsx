@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { BlogPost } from '@/types';
 import { Calendar, ExternalLink } from 'lucide-react';
 import { ImageWithFallback } from '../ImageWithFallback';
@@ -7,7 +8,7 @@ interface BlogCardProps {
   post: BlogPost;
 }
 
-export function BlogCard({ post }: BlogCardProps) {
+export const BlogCard = memo(function BlogCard({ post }: BlogCardProps) {
   return (
     <a href={post.link} target="_blank" rel="noopener noreferrer" className={styles['blog-card']}>
       <div className={styles['image-container']}>
@@ -45,4 +46,4 @@ export function BlogCard({ post }: BlogCardProps) {
       </div>
     </a>
   );
-}
+});
