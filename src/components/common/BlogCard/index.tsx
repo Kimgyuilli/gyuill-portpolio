@@ -11,7 +11,13 @@ export function BlogCard({ post }: BlogCardProps) {
   return (
     <a href={post.link} target="_blank" rel="noopener noreferrer" className={styles['blog-card']}>
       <div className={styles['image-container']}>
-        <ImageWithFallback src={post.image} alt={post.title} className={styles.image} />
+        <ImageWithFallback
+          src={post.image}
+          alt={post.title}
+          className={styles.image}
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div className={styles.content}>
         <div className={styles.meta}>
