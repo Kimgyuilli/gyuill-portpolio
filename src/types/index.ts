@@ -1,5 +1,7 @@
 /// <reference types="react" />
 
+import type { ProjectCategory } from '@/constants/projectCategories';
+
 export interface NavItem {
   label: string;
   href: string;
@@ -12,7 +14,7 @@ export interface Project {
   tags: string[];
   github: string;
   demo: string;
-  category: 'All' | 'Web' | 'Mobile' | 'AI' | 'Backend';
+  category: Exclude<ProjectCategory, 'All'>;
 }
 
 export interface SkillCategory {
