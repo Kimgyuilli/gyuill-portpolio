@@ -23,6 +23,13 @@ export function RightColumn() {
     return 'tertiary';
   };
 
+  const handleProjectClick = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={styles['right-column']}>
       {/* 프로젝트 */}
@@ -30,7 +37,19 @@ export function RightColumn() {
         <h2 className={styles['section-title']}>프로젝트</h2>
         <div className={styles['timeline-list']}>
           {featuredProjects.map((project, index) => (
-            <div key={project.title} className={styles['project-card']}>
+            <div
+              key={project.title}
+              className={styles['project-card']}
+              onClick={handleProjectClick}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleProjectClick();
+                }
+              }}
+            >
               <div className={styles['project-header']}>
                 {project.image && (
                   <div className={styles['project-image']}>
