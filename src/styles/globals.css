@@ -189,3 +189,46 @@
 html {
   font-size: var(--font-size);
 }
+
+/* 전역 스크롤바 커스터마이징 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(148, 163, 184) rgb(241, 245, 249);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(241, 245, 249);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgb(148, 163, 184);
+  border-radius: 5px;
+  border: 2px solid rgb(241, 245, 249);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 116, 139);
+}
+
+/* 다크 모드 스크롤바 */
+.dark * {
+  scrollbar-color: rgb(71, 85, 105) rgb(15, 23, 42);
+}
+
+.dark *::-webkit-scrollbar-track {
+  background: rgb(15, 23, 42);
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background: rgb(71, 85, 105);
+  border-color: rgb(15, 23, 42);
+}
+
+.dark *::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 116, 139);
+}
