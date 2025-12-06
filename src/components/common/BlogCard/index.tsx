@@ -10,7 +10,13 @@ interface BlogCardProps {
 
 export const BlogCard = memo(function BlogCard({ post }: BlogCardProps) {
   return (
-    <a href={post.link} target="_blank" rel="noopener noreferrer" className={styles['blog-card']}>
+    <a
+      href={post.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles['blog-card']}
+      aria-label={`${post.title} (새 창에서 열기)`}
+    >
       <div className={styles['image-container']}>
         <ImageWithFallback
           src={post.image}
@@ -23,14 +29,14 @@ export const BlogCard = memo(function BlogCard({ post }: BlogCardProps) {
       <div className={styles.content}>
         <div className={styles.meta}>
           <span className={styles['meta-item']}>
-            <Calendar size={14} />
-            {post.date}
+            <Calendar size={14} aria-hidden="true" />
+            <span>{post.date}</span>
           </span>
         </div>
         <h3 className={styles['title-wrapper']}>
           {post.title}
           <span className={styles['external-icon']}>
-            <ExternalLink size={16} />
+            <ExternalLink size={16} aria-hidden="true" />
           </span>
         </h3>
         <p className={styles.summary}>{post.summary}</p>
