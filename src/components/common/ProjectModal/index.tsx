@@ -2,6 +2,8 @@ import { X, Github, ExternalLink, Calendar, Users, Briefcase } from 'lucide-reac
 import { useEffect } from 'react';
 import type { Project } from '@/types';
 import { ImageWithFallback } from '../ImageWithFallback';
+import { TechStackSection } from './TechStackSection';
+import { ProjectDetails } from './ProjectDetails';
 import styles from './styles.module.css';
 
 interface ProjectModalProps {
@@ -10,7 +12,7 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
-  // ESC 키로 모달 닫기
+  // ESC 키로 모달 닫기 & 스크롤 방지
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -19,7 +21,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     };
 
     document.addEventListener('keydown', handleEscape);
-    document.body.style.overflow = 'hidden'; // 배경 스크롤 방지
+    document.body.style.overflow = 'hidden';
 
     return () => {
       document.removeEventListener('keydown', handleEscape);
@@ -33,6 +35,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       onClose();
     }
   };
+
+  const hasProjectInfo = project.duration || project.teamSize || project.role;
 
   return (
     <div className={styles.backdrop} onClick={handleBackdropClick}>
@@ -60,7 +64,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           {/* 프로젝트 정보 */}
-          {(project.duration || project.teamSize || project.role) && (
+          {hasProjectInfo && (
             <div className={styles['info-grid']}>
               {project.duration && (
                 <div className={styles['info-item']}>
@@ -92,106 +96,11 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             ))}
           </div>
 
-          {/* 상세 설명 */}
-          {project.detailedDescription && (
-            <div className={styles.section}>
-              <h3 className={styles['section-title']}>프로젝트 개요</h3>
-              <p className={styles.description}>{project.detailedDescription}</p>
-            </div>
-          )}
+          {/* 프로젝트 상세 정보 */}
+          <ProjectDetails project={project} />
 
-          {/* 주요 기능 */}
-          {project.features && project.features.length > 0 && (
-            <div className={styles.section}>
-              <h3 className={styles['section-title']}>주요 기능</h3>
-              <ul className={styles.list}>
-                {project.features.map((feature) => (
-                  <li key={feature} className={styles['list-item']}>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* 기술 스택 */}
-          {project.techStack && (
-            <div className={styles.section}>
-              <h3 className={styles['section-title']}>기술 스택</h3>
-              <div className={styles['tech-stack']}>
-                {project.techStack.frontend && (
-                  <div className={styles['tech-category']}>
-                    <h4 className={styles['tech-title']}>Frontend</h4>
-                    <div className={styles['tech-tags']}>
-                      {project.techStack.frontend.map((tech) => (
-                        <span key={tech} className={styles['tech-tag']}>
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {project.techStack.backend && (
-                  <div className={styles['tech-category']}>
-                    <h4 className={styles['tech-title']}>Backend</h4>
-                    <div className={styles['tech-tags']}>
-                      {project.techStack.backend.map((tech) => (
-                        <span key={tech} className={styles['tech-tag']}>
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {project.techStack.database && (
-                  <div className={styles['tech-category']}>
-                    <h4 className={styles['tech-title']}>Database</h4>
-                    <div className={styles['tech-tags']}>
-                      {project.techStack.database.map((tech) => (
-                        <span key={tech} className={styles['tech-tag']}>
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {project.techStack.deployment && (
-                  <div className={styles['tech-category']}>
-                    <h4 className={styles['tech-title']}>Deployment</h4>
-                    <div className={styles['tech-tags']}>
-                      {project.techStack.deployment.map((tech) => (
-                        <span key={tech} className={styles['tech-tag']}>
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
-          {/* 기술적 과제 */}
-          {project.challenges && project.challenges.length > 0 && (
-            <div className={styles.section}>
-              <h3 className={styles['section-title']}>기술적 과제 및 해결</h3>
-              <ul className={styles.list}>
-                {project.challenges.map((challenge) => (
-                  <li key={challenge} className={styles['list-item']}>
-                    {challenge}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* 성과 */}
-          {project.outcome && (
-            <div className={styles.section}>
-              <h3 className={styles['section-title']}>성과</h3>
-              <p className={styles.description}>{project.outcome}</p>
-            </div>
-          )}
+          {/* 기술 스택 섹션 */}
+          <TechStackSection techStack={project.techStack} />
 
           {/* 액션 버튼 */}
           <div className={styles.actions}>
