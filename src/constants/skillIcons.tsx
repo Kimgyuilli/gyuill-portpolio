@@ -62,9 +62,9 @@ export const SKILL_ICON_SLUGS: Record<string, string> = {
   Slack: 'slack',
   Notion: 'notion',
   Postman: 'postman',
-  claude: 'anthropic',
-  gemini: 'googlegemini',
-  perplexity: 'perplexity',
+  Claude: 'anthropic',
+  Gemini: 'googlegemini',
+  Perplexity: 'perplexity',
 };
 
 // 아이콘 URL 생성 (로컬 이미지 우선, 없으면 CDN 사용)

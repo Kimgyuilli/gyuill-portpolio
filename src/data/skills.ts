@@ -32,9 +32,9 @@ export const skillCategories: SkillCategoryData[] = [
       'Slack',
       'Notion',
       'Postman',
-      'claude',
-      'gemini',
-      'perplexity',
+      'Claude',
+      'Gemini',
+      'Perplexity',
     ],
   },
 ];
