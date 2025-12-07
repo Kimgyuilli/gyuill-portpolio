@@ -1,26 +1,14 @@
+import { useTheme } from 'next-themes';
 import { projects } from '@/data/projects';
 import { skillCategories } from '@/data/skills';
+import { SKILL_ICONS, getSkillIconUrl } from '@/constants/skillIcons';
 import sharedStyles from './styles.module.css';
 import styles from './RightColumn.module.css';
 
-type SkillLevel = 'primary' | 'secondary' | 'tertiary';
-
 export function RightColumn() {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
   const featuredProjects = projects.slice(0, 3);
-
-  // 스킬 데이터 변환 로직
-  const allSkills = skillCategories.flatMap((category) =>
-    category.skills.map((skill) => ({
-      name: skill,
-      category: category.title,
-    }))
-  );
-
-  const getSkillLevel = (category: string): SkillLevel => {
-    if (category === 'Frontend' || category === 'Mobile') return 'primary';
-    if (category === 'Backend' || category === 'Database') return 'secondary';
-    return 'tertiary';
-  };
 
   const handleProjectClick = () => {
     const projectsSection = document.getElementById('projects');
@@ -77,34 +65,26 @@ export function RightColumn() {
 
       {/* 스킬 */}
       <div>
-        <h2 className={sharedStyles['section-title']}>스킬</h2>
-        <div className={styles['skills-grid']}>
-          {allSkills.slice(0, 9).map((skill, index) => {
-            const level = getSkillLevel(skill.category);
-            const skillClass = `${styles['skill-box']} ${styles[`skill-${level}`]}`;
-
-            return (
-              <div key={`${skill.name}-${index}`} className={skillClass}>
-                <span className={styles['skill-name']}>{skill.name}</span>
+        <h2 className={sharedStyles['section-title']}>Skills</h2>
+        <div className={styles['skills-container']}>
+          {skillCategories.map((category) => (
+            <div key={category.title} className={styles['skill-category']}>
+              <div className={styles['category-header']}>
+                <div className={styles['category-icon']}>{SKILL_ICONS[category.title]}</div>
+                <h3 className={styles['category-title']}>{category.title}</h3>
               </div>
-            );
-          })}
-        </div>
-
-        {/* 스킬 레벨 범례 */}
-        <div className={styles['skills-legend']}>
-          <div className={styles['legend-item']}>
-            <div className={`${styles['legend-box']} ${styles['legend-box-primary']}`}></div>
-            <span className={styles['legend-text']}>주요 언어</span>
-          </div>
-          <div className={styles['legend-item']}>
-            <div className={`${styles['legend-box']} ${styles['legend-box-secondary']}`}></div>
-            <span className={styles['legend-text']}>실전 경험</span>
-          </div>
-          <div className={styles['legend-item']}>
-            <div className={`${styles['legend-box']} ${styles['legend-box-tertiary']}`}></div>
-            <span className={styles['legend-text']}>기타</span>
-          </div>
+              <div className={styles['skill-icons-grid']}>
+                {category.skills.map((skill) => {
+                  const iconUrl = getSkillIconUrl(skill, isDark);
+                  return iconUrl ? (
+                    <div key={skill} className={styles['skill-icon-wrapper']} title={skill}>
+                      <img src={iconUrl} alt={skill} className={styles['skill-icon-img']} />
+                    </div>
+                  ) : null;
+                })}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
