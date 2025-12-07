@@ -1,21 +1,34 @@
 .blog-card {
   display: block;
-  background-color: rgba(15, 23, 42, 0.5);
-  border: 1px solid rgb(30, 41, 59);
+  background-color: rgba(243, 244, 246, 0.5);
+  border: 1px solid rgb(226, 232, 240);
   border-radius: 0.75rem;
   overflow: hidden;
   transition: all 0.2s;
   text-decoration: none;
 }
 
+:global(.dark) .blog-card {
+  background-color: rgba(15, 23, 42, 0.5);
+  border-color: rgb(30, 41, 59);
+}
+
 .blog-card:hover {
-  border-color: rgba(52, 211, 153, 0.5);
+  border-color: rgba(16, 185, 129, 0.5);
   transform: scale(1.02);
+}
+
+:global(.dark) .blog-card:hover {
+  border-color: rgba(52, 211, 153, 0.5);
 }
 
 .image-container {
   aspect-ratio: 16 / 9;
   overflow: hidden;
+  background-color: rgb(226, 232, 240);
+}
+
+:global(.dark) .image-container {
   background-color: rgb(30, 41, 59);
 }
 
@@ -57,7 +70,7 @@
 .title-wrapper {
   font-size: 1.25rem;
   font-weight: 600;
-  color: rgb(241, 245, 249);
+  color: rgb(15, 23, 42);
   margin-bottom: 0.75rem;
   transition: color 0.2s;
   display: flex;
@@ -66,7 +79,15 @@
   gap: 0.5rem;
 }
 
+:global(.dark) .title-wrapper {
+  color: rgb(241, 245, 249);
+}
+
 .blog-card:hover .title-wrapper {
+  color: rgb(16, 185, 129);
+}
+
+:global(.dark) .blog-card:hover .title-wrapper {
   color: rgb(52, 211, 153);
 }
 
@@ -81,12 +102,16 @@
 }
 
 .summary {
-  color: rgb(148, 163, 184);
+  color: rgb(100, 116, 139);
   margin-bottom: 1rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+:global(.dark) .summary {
+  color: rgb(148, 163, 184);
 }
 
 .tags {
@@ -97,8 +122,13 @@
 
 .tag {
   padding: 0.25rem 0.75rem;
-  background-color: rgb(30, 41, 59);
-  color: rgb(52, 211, 153);
+  background-color: rgb(226, 232, 240);
+  color: rgb(16, 185, 129);
   font-size: 0.75rem;
   border-radius: 9999px;
+}
+
+:global(.dark) .tag {
+  background-color: rgb(30, 41, 59);
+  color: rgb(52, 211, 153);
 }

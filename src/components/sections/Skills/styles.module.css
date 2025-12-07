@@ -31,15 +31,23 @@
 
 .title {
   margin-bottom: 1rem;
-  color: rgb(241, 245, 249);
+  color: rgb(15, 23, 42);
   font-size: 2rem;
   font-weight: bold;
 }
 
+:global(.dark) .title {
+  color: rgb(241, 245, 249);
+}
+
 .description {
-  color: rgb(148, 163, 184);
+  color: rgb(100, 116, 139);
   max-width: 42rem;
   margin: 0 auto;
+}
+
+:global(.dark) .description {
+  color: rgb(148, 163, 184);
 }
 
 .grid {

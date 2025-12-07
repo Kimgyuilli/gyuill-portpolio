@@ -1,16 +1,25 @@
 .achievement-card {
   display: block;
-  background-color: rgba(15, 23, 42, 0.5);
-  border: 1px solid rgb(30, 41, 59);
+  background-color: rgba(243, 244, 246, 0.5);
+  border: 1px solid rgb(226, 232, 240);
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: all 0.2s;
   text-decoration: none;
 }
 
+:global(.dark) .achievement-card {
+  background-color: rgba(15, 23, 42, 0.5);
+  border-color: rgb(30, 41, 59);
+}
+
 .achievement-card-link:hover {
-  border-color: rgba(52, 211, 153, 0.5);
+  border-color: rgba(16, 185, 129, 0.5);
   transform: scale(1.02);
+}
+
+:global(.dark) .achievement-card-link:hover {
+  border-color: rgba(52, 211, 153, 0.5);
 }
 
 .content {
@@ -23,11 +32,16 @@
   flex-shrink: 0;
   width: 3rem;
   height: 3rem;
-  background-color: rgba(52, 211, 153, 0.1);
+  background-color: rgba(16, 185, 129, 0.1);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgb(16, 185, 129);
+}
+
+:global(.dark) .icon-wrapper {
+  background-color: rgba(52, 211, 153, 0.1);
   color: rgb(52, 211, 153);
 }
 
@@ -52,11 +66,19 @@
 .title {
   font-size: 1.125rem;
   font-weight: 600;
+  color: rgb(15, 23, 42);
+}
+
+:global(.dark) .title {
   color: rgb(241, 245, 249);
 }
 
 .external-icon {
   flex-shrink: 0;
+  color: rgb(100, 116, 139);
+}
+
+:global(.dark) .external-icon {
   color: rgb(148, 163, 184);
 }
 
@@ -66,9 +88,13 @@
 }
 
 .issuer {
-  color: rgb(52, 211, 153);
+  color: rgb(16, 185, 129);
   font-size: 0.875rem;
   margin-bottom: 0.25rem;
+}
+
+:global(.dark) .issuer {
+  color: rgb(52, 211, 153);
 }
 
 .date {
@@ -78,6 +104,10 @@
 }
 
 .description {
-  color: rgb(148, 163, 184);
+  color: rgb(100, 116, 139);
   font-size: 0.875rem;
+}
+
+:global(.dark) .description {
+  color: rgb(148, 163, 184);
 }
