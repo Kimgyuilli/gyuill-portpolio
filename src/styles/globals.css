@@ -66,6 +66,8 @@ body {
   --spacing-lg: 1.5rem;                   /* 24px */
   --spacing-xl: 2rem;                     /* 32px */
   --spacing-2xl: 2.5rem;                  /* 40px */
+  --spacing-3xl: 3rem;                    /* 48px */
+  --spacing-4xl: 5rem;                    /* 80px */
 
   /* Alpha Colors - Light Mode */
   --border-light-alpha-30: rgba(203, 213, 225, 0.3);
