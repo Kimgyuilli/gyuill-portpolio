@@ -13,23 +13,19 @@
 }
 
 .project-card:hover {
-  border-color: rgba(16, 185, 129, 0.5);
+  border-color: var(--accent-border);
   transform: translateY(-2px);
   background-color: rgba(203, 213, 225, 0.5);
 }
 
 :global(.dark) .project-card:hover {
-  border-color: rgba(52, 211, 153, 0.5);
+  border-color: var(--accent-border);
   background-color: rgba(30, 41, 59, 0.5);
 }
 
 .project-card:focus {
-  outline: 2px solid rgb(16, 185, 129);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
-}
-
-:global(.dark) .project-card:focus {
-  outline-color: rgb(52, 211, 153);
 }
 
 .project-header {
@@ -64,7 +60,7 @@
 }
 
 .project-title {
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   font-weight: 600;
   font-size: 0.875rem;
   margin-bottom: 0.25rem;
@@ -73,17 +69,9 @@
   white-space: nowrap;
 }
 
-:global(.dark) .project-title {
-  color: rgb(241, 245, 249);
-}
-
 .project-date {
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   font-size: 0.75rem;
-}
-
-:global(.dark) .project-date {
-  color: rgb(148, 163, 184);
 }
 
 .project-tags {
@@ -119,21 +107,13 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: rgb(71, 85, 105);
+  color: var(--text-body);
   transition: color 0.2s;
   text-decoration: none;
 }
 
-:global(.dark) .link-item {
-  color: rgb(203, 213, 225);
-}
-
 .link-item:hover {
-  color: rgb(16, 185, 129);
-}
-
-:global(.dark) .link-item:hover {
-  color: rgb(52, 211, 153);
+  color: var(--accent-primary);
 }
 
 .link-icon {
@@ -176,7 +156,7 @@
 
 .link-url {
   font-size: 0.75rem;
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -234,13 +214,13 @@
 
 .skill-tertiary {
   background-color: rgba(148, 163, 184, 0.3);
-  color: rgb(71, 85, 105);
+  color: var(--text-muted);
   border-color: rgba(148, 163, 184, 0.5);
 }
 
 :global(.dark) .skill-tertiary {
   background-color: rgba(71, 85, 105, 0.3);
-  color: rgb(203, 213, 225);
+  color: var(--text-body);
   border-color: rgba(71, 85, 105, 0.5);
 }
 
@@ -280,9 +260,5 @@
 }
 
 .legend-text {
-  color: rgb(100, 116, 139);
-}
-
-:global(.dark) .legend-text {
-  color: rgb(148, 163, 184);
+  color: var(--text-muted);
 }

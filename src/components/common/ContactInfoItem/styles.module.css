@@ -2,27 +2,18 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: rgb(71, 85, 105);
-}
-
-:global(.dark) .contact-info-item {
-  color: rgb(203, 213, 225);
+  color: var(--text-body);
 }
 
 .icon-wrapper {
   width: 3rem;
   height: 3rem;
-  background-color: rgba(16, 185, 129, 0.1);
+  background-color: var(--accent-hover);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(16, 185, 129);
-}
-
-:global(.dark) .icon-wrapper {
-  background-color: rgba(52, 211, 153, 0.1);
-  color: rgb(52, 211, 153);
+  color: var(--accent-primary);
 }
 
 .info {
@@ -30,36 +21,20 @@
 }
 
 .label {
-  color: rgb(71, 85, 105);
+  color: var(--text-body);
   margin-bottom: 0.125rem;
 }
 
-:global(.dark) .label {
-  color: rgb(203, 213, 225);
-}
-
 .value {
-  color: rgb(100, 116, 139);
-}
-
-:global(.dark) .value {
-  color: rgb(148, 163, 184);
+  color: var(--text-muted);
 }
 
 .value-link {
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-:global(.dark) .value-link {
-  color: rgb(148, 163, 184);
-}
-
 .value-link:hover {
-  color: rgb(16, 185, 129);
-}
-
-:global(.dark) .value-link:hover {
-  color: rgb(52, 211, 153);
+  color: var(--accent-primary);
 }

@@ -1,26 +1,16 @@
 .project-card {
-  background-color: white;
-  border: 1px solid rgb(226, 232, 240);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
   border-radius: 0.75rem;
   overflow: hidden;
   transition: all 0.2s;
   cursor: pointer;
 }
 
-:global(.dark) .project-card {
-  background-color: rgb(15, 23, 42);
-  border-color: rgb(30, 41, 59);
-}
-
 .project-card:hover {
-  border-color: rgba(16, 185, 129, 0.5);
+  border-color: var(--accent-border);
   transform: translateY(-0.25rem);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-:global(.dark) .project-card:hover {
-  border-color: rgba(52, 211, 153, 0.5);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
 .image-container {
@@ -45,23 +35,15 @@
 
 .title {
   margin-bottom: 0.75rem;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   font-size: 1.125rem;
   font-weight: 600;
 }
 
-:global(.dark) .title {
-  color: rgb(241, 245, 249);
-}
-
 .description {
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   margin-bottom: 1rem;
   line-height: 1.5;
-}
-
-:global(.dark) .description {
-  color: rgb(148, 163, 184);
 }
 
 .tags {
@@ -73,15 +55,10 @@
 
 .tag {
   padding: 0.25rem 0.5rem;
-  background-color: rgb(226, 232, 240);
-  color: rgb(71, 85, 105);
+  background-color: var(--border-light);
+  color: var(--text-body);
   border-radius: 0.25rem;
   font-size: 0.875rem;
-}
-
-:global(.dark) .tag {
-  background-color: rgb(30, 41, 59);
-  color: rgb(203, 213, 225);
 }
 
 .links {
@@ -93,19 +70,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-:global(.dark) .link {
-  color: rgb(148, 163, 184);
-}
-
 .link:hover {
-  color: rgb(16, 185, 129);
-}
-
-:global(.dark) .link:hover {
-  color: rgb(52, 211, 153);
+  color: var(--accent-primary);
 }

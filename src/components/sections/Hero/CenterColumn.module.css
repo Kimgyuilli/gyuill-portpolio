@@ -15,13 +15,9 @@
 }
 
 .about-paragraph {
-  color: rgb(71, 85, 105);
+  color: var(--text-body);
   font-size: 0.875rem;
   line-height: 1.6;
-}
-
-:global(.dark) .about-paragraph {
-  color: rgb(203, 213, 225);
 }
 
 .timeline-item {
@@ -31,14 +27,10 @@
 
 .timeline-date {
   font-size: 0.875rem;
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   font-family: monospace;
   width: 8rem;
   flex-shrink: 0;
-}
-
-:global(.dark) .timeline-date {
-  color: rgb(148, 163, 184);
 }
 
 .timeline-content {
@@ -46,29 +38,17 @@
 }
 
 .timeline-title {
-  color: rgb(30, 41, 59);
+  color: var(--text-secondary);
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
-:global(.dark) .timeline-title {
-  color: rgb(226, 232, 240);
-}
-
 .timeline-subtitle {
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   font-size: 0.875rem;
 }
 
-:global(.dark) .timeline-subtitle {
-  color: rgb(148, 163, 184);
-}
-
 .timeline-text {
-  color: rgb(30, 41, 59);
+  color: var(--text-secondary);
   font-weight: 500;
-}
-
-:global(.dark) .timeline-text {
-  color: rgb(226, 232, 240);
 }

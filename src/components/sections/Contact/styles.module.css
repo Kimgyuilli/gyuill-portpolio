@@ -1,11 +1,7 @@
 .contact-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(243, 244, 246, 0.5);
-}
-
-:global(.dark) .contact-section {
-  background-color: rgba(15, 23, 42, 0.5);
+  background-color: var(--bg-section);
 }
 
 .container {
@@ -36,23 +32,15 @@
 
 .title {
   margin-bottom: 1rem;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   font-size: 2rem;
   font-weight: bold;
 }
 
-:global(.dark) .title {
-  color: rgb(241, 245, 249);
-}
-
 .description {
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   max-width: 42rem;
   margin: 0 auto;
-}
-
-:global(.dark) .description {
-  color: rgb(148, 163, 184);
 }
 
 .content-grid {
@@ -74,13 +62,9 @@
 
 .section-title {
   margin-bottom: 1.5rem;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   font-size: 1.125rem;
   font-weight: 600;
-}
-
-:global(.dark) .section-title {
-  color: rgb(241, 245, 249);
 }
 
 .contact-list {
@@ -92,13 +76,9 @@
 
 .social-title {
   margin-bottom: 1rem;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   font-size: 1rem;
   font-weight: 600;
-}
-
-:global(.dark) .social-title {
-  color: rgb(241, 245, 249);
 }
 
 .social-links {
@@ -124,45 +104,29 @@
 .label {
   display: block;
   margin-bottom: 0.5rem;
-  color: rgb(71, 85, 105);
-}
-
-:global(.dark) .label {
-  color: rgb(203, 213, 225);
+  color: var(--text-body);
 }
 
 .input,
 .textarea {
   width: 100%;
   padding: 0.75rem 1rem;
-  background-color: rgb(248, 250, 252);
-  border: 1px solid rgb(226, 232, 240);
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-light);
   border-radius: 0.5rem;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   transition: border-color 0.2s;
-}
-
-:global(.dark) .input,
-:global(.dark) .textarea {
-  background-color: rgb(15, 23, 42);
-  border-color: rgb(30, 41, 59);
-  color: rgb(241, 245, 249);
 }
 
 .input:focus,
 .textarea:focus {
   outline: none;
-  border-color: rgb(16, 185, 129);
+  border-color: var(--accent-primary);
 }
 
 .input::placeholder,
 .textarea::placeholder {
-  color: rgb(148, 163, 184);
-}
-
-:global(.dark) .input::placeholder,
-:global(.dark) .textarea::placeholder {
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
 }
 
 .textarea {
@@ -172,7 +136,7 @@
 .submit-button {
   width: 100%;
   padding: 0.75rem 1.5rem;
-  background-color: rgb(16, 185, 129);
+  background-color: var(--accent-primary);
   color: white;
   border-radius: 0.5rem;
   transition: background-color 0.2s;
@@ -183,10 +147,6 @@
   border: none;
   cursor: pointer;
   font-weight: 500;
-}
-
-:global(.dark) .submit-button {
-  color: rgb(2, 6, 23);
 }
 
 .submit-button:hover {
@@ -201,12 +161,7 @@
 .footer {
   margin-top: 5rem;
   padding-top: 2rem;
-  border-top: 1px solid rgb(226, 232, 240);
+  border-top: 1px solid var(--border-light);
   text-align: center;
-  color: rgb(100, 116, 139);
-}
-
-:global(.dark) .footer {
-  border-top-color: rgb(30, 41, 59);
-  color: rgb(148, 163, 184);
+  color: var(--text-muted);
 }

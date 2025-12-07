@@ -34,7 +34,7 @@
 }
 
 :global(.dark) .modal {
-  background-color: rgb(15, 23, 42);
+  background-color: var(--text-primary);
 }
 
 @keyframes slideUp {
@@ -104,12 +104,12 @@
 .title {
   font-size: 2rem;
   font-weight: bold;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   line-height: 1.2;
 }
 
 :global(.dark) .title {
-  color: rgb(241, 245, 249);
+  color: var(--text-primary);
 }
 
 .category {
@@ -144,12 +144,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   font-size: 0.875rem;
 }
 
 :global(.dark) .info-item {
-  color: rgb(148, 163, 184);
+  color: var(--text-muted);
 }
 
 .tags {
@@ -161,7 +161,7 @@
 
 .tag {
   padding: 0.375rem 0.75rem;
-  background-color: rgb(241, 245, 249);
+  background-color: var(--bg-body);
   color: rgb(51, 65, 85);
   border-radius: 0.375rem;
   font-size: 0.875rem;
@@ -170,7 +170,7 @@
 
 :global(.dark) .tag {
   background-color: rgb(30, 41, 59);
-  color: rgb(203, 213, 225);
+  color: var(--toggle-track);
 }
 
 .section {
@@ -180,21 +180,21 @@
 .section-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 :global(.dark) .section-title {
-  color: rgb(241, 245, 249);
+  color: var(--text-primary);
 }
 
 .description {
-  color: rgb(71, 85, 105);
+  color: var(--text-body);
   line-height: 1.7;
 }
 
 :global(.dark) .description {
-  color: rgb(148, 163, 184);
+  color: var(--text-body);
 }
 
 .list {
@@ -207,12 +207,12 @@
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.75rem;
-  color: rgb(71, 85, 105);
+  color: var(--text-body);
   line-height: 1.6;
 }
 
 :global(.dark) .list-item {
-  color: rgb(148, 163, 184);
+  color: var(--text-body);
 }
 
 .list-item::before {
@@ -247,13 +247,13 @@
 .tech-title {
   font-size: 0.875rem;
   font-weight: 600;
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 :global(.dark) .tech-title {
-  color: rgb(148, 163, 184);
+  color: var(--text-muted);
 }
 
 .tech-tags {
@@ -308,7 +308,7 @@
 
 :global(.dark) .action-button {
   background-color: rgb(52, 211, 153);
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
 }
 
 :global(.dark) .action-button:hover {

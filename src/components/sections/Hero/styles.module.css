@@ -1,12 +1,8 @@
 .hero-section {
   min-height: 100vh;
-  background-color: rgb(248, 250, 252);
+  background-color: var(--bg-body);
   padding-top: 6rem;
   padding-bottom: 4rem;
-}
-
-:global(.dark) .hero-section {
-  background-color: rgb(2, 6, 23);
 }
 
 .hero-container {
@@ -44,15 +40,10 @@
 .section-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgb(16, 185, 129);
-}
-
-:global(.dark) .section-title {
-  color: rgb(241, 245, 249);
-  border-bottom-color: rgb(52, 211, 153);
+  border-bottom: 2px solid var(--accent-primary);
 }
 
 .timeline-list {

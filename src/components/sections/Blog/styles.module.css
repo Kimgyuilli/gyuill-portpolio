@@ -1,11 +1,7 @@
 .blog-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(243, 244, 246, 0.5);
-}
-
-:global(.dark) .blog-section {
-  background-color: rgba(15, 23, 42, 0.5);
+  background-color: var(--bg-section);
 }
 
 .container {
@@ -36,23 +32,15 @@
 
 .title {
   margin-bottom: 1rem;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   font-size: 2rem;
   font-weight: bold;
 }
 
-:global(.dark) .title {
-  color: rgb(241, 245, 249);
-}
-
 .description {
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   max-width: 42rem;
   margin: 0 auto;
-}
-
-:global(.dark) .description {
-  color: rgb(148, 163, 184);
 }
 
 .grid {

@@ -1,7 +1,11 @@
 .career-title {
   font-size: 2.25rem;
   font-weight: bold;
-  background: linear-gradient(to right, rgb(168, 85, 247), rgb(139, 92, 246));
+  background: linear-gradient(
+    to right,
+    var(--gradient-purple-1),
+    var(--gradient-purple-2)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -9,7 +13,11 @@
 }
 
 :global(.dark) .career-title {
-  background: linear-gradient(to right, rgb(139, 92, 246), rgb(168, 85, 247));
+  background: linear-gradient(
+    to right,
+    var(--gradient-purple-1),
+    var(--gradient-purple-2)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -25,7 +33,7 @@
   height: 12rem;
   border-radius: 1rem;
   overflow: hidden;
-  background: rgba(243, 244, 246, 0.5);
+  background: var(--bg-card-alt);
   border: 1px solid rgba(203, 213, 225, 0.5);
   display: flex;
   align-items: center;
@@ -33,7 +41,11 @@
 }
 
 :global(.dark) .profile-image-box {
-  background: linear-gradient(to bottom right, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.2));
+  background: linear-gradient(
+    to bottom right,
+    rgba(139, 92, 246, 0.2),
+    rgba(168, 85, 247, 0.2)
+  );
   border-color: rgba(71, 85, 105, 0.5);
 }
 
@@ -56,15 +68,10 @@
 .section-header {
   font-size: 1.125rem;
   font-weight: bold;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgb(226, 232, 240);
-}
-
-:global(.dark) .section-header {
-  color: rgb(241, 245, 249);
-  border-bottom-color: rgb(71, 85, 105);
+  border-bottom: 2px solid var(--border-light);
 }
 
 .info-grid {
@@ -80,35 +87,23 @@
 
 .info-label {
   font-size: 0.875rem;
-  color: rgb(71, 85, 105);
+  color: var(--text-muted);
   margin-bottom: 0.25rem;
 }
 
 .info-value {
-  color: rgb(51, 65, 85);
+  color: var(--text-body);
   font-size: 0.875rem;
-}
-
-:global(.dark) .info-value {
-  color: rgb(226, 232, 240);
 }
 
 .info-value-name {
-  color: rgb(30, 41, 59);
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
-:global(.dark) .info-value-name {
-  color: rgb(226, 232, 240);
-}
-
 .info-value-mono {
-  color: rgb(71, 85, 105);
+  color: var(--text-body);
   font-size: 0.875rem;
   font-family: monospace;
   word-break: break-all;
-}
-
-:global(.dark) .info-value-mono {
-  color: rgb(203, 213, 225);
 }

@@ -1,11 +1,7 @@
 .projects-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(243, 244, 246, 0.5);
-}
-
-:global(.dark) .projects-section {
-  background-color: rgba(15, 23, 42, 0.5);
+  background-color: var(--bg-section);
 }
 
 .container {
@@ -36,23 +32,15 @@
 
 .title {
   margin-bottom: 1rem;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   font-size: 2rem;
   font-weight: bold;
 }
 
-:global(.dark) .title {
-  color: rgb(241, 245, 249);
-}
-
 .description {
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   max-width: 42rem;
   margin: 0 auto;
-}
-
-:global(.dark) .description {
-  color: rgb(148, 163, 184);
 }
 
 .filter-buttons {
@@ -74,7 +62,7 @@
 }
 
 .filter-button-active {
-  background-color: rgb(16, 185, 129);
+  background-color: var(--accent-primary);
   color: white;
 }
 
@@ -83,21 +71,12 @@
 }
 
 .filter-button-inactive {
-  background-color: rgb(226, 232, 240);
-  color: rgb(71, 85, 105);
-}
-
-:global(.dark) .filter-button-inactive {
-  background-color: rgb(30, 41, 59);
-  color: rgb(203, 213, 225);
+  background-color: var(--border-light);
+  color: var(--text-body);
 }
 
 .filter-button-inactive:hover {
-  background-color: rgb(203, 213, 225);
-}
-
-:global(.dark) .filter-button-inactive:hover {
-  background-color: rgb(51, 65, 85);
+  background-color: var(--border-medium);
 }
 
 .grid {

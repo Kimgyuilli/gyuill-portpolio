@@ -1,27 +1,17 @@
 .social-link {
   width: 3rem;
   height: 3rem;
-  background-color: rgb(226, 232, 240);
+  background-color: var(--border-light);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(100, 116, 139);
+  color: var(--text-muted);
   text-decoration: none;
   transition: all 0.2s;
 }
 
-:global(.dark) .social-link {
-  background-color: rgb(30, 41, 59);
-  color: rgb(148, 163, 184);
-}
-
 .social-link:hover {
-  background-color: rgba(16, 185, 129, 0.2);
-  color: rgb(16, 185, 129);
-}
-
-:global(.dark) .social-link:hover {
-  background-color: rgba(52, 211, 153, 0.2);
-  color: rgb(52, 211, 153);
+  background-color: var(--accent-hover);
+  color: var(--accent-primary);
 }

@@ -1,31 +1,18 @@
 .skill-card {
-  background-color: rgba(243, 244, 246, 0.5);
-  border: 1px solid rgb(226, 232, 240);
+  background-color: var(--bg-card-alt);
+  border: 1px solid var(--border-light);
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: border-color 0.2s;
 }
 
-:global(.dark) .skill-card {
-  background-color: rgba(15, 23, 42, 0.5);
-  border-color: rgb(30, 41, 59);
-}
-
 .skill-card:hover {
-  border-color: rgba(16, 185, 129, 0.5);
-}
-
-:global(.dark) .skill-card:hover {
-  border-color: rgba(52, 211, 153, 0.5);
+  border-color: var(--accent-border);
 }
 
 .icon {
-  color: rgb(16, 185, 129);
+  color: var(--accent-primary);
   margin-bottom: 1rem;
-}
-
-:global(.dark) .icon {
-  color: rgb(52, 211, 153);
 }
 
 .icon svg {
@@ -35,13 +22,9 @@
 
 .title {
   margin-bottom: 1rem;
-  color: rgb(15, 23, 42);
+  color: var(--text-primary);
   font-size: 1.125rem;
   font-weight: 600;
-}
-
-:global(.dark) .title {
-  color: rgb(241, 245, 249);
 }
 
 .skills-list {
@@ -52,13 +35,8 @@
 
 .skill-tag {
   padding: 0.25rem 0.75rem;
-  background-color: rgba(16, 185, 129, 0.1);
-  color: rgb(16, 185, 129);
+  background-color: var(--accent-hover);
+  color: var(--accent-primary);
   border-radius: 9999px;
   font-size: 0.875rem;
-}
-
-:global(.dark) .skill-tag {
-  background-color: rgba(52, 211, 153, 0.1);
-  color: rgb(52, 211, 153);
 }
