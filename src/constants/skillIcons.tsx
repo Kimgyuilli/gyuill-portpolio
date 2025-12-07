@@ -18,8 +18,8 @@ export const SKILL_ICON_SLUGS: Record<string, string> = {
   // Backend
   Django: 'django',
   Python: 'python',
-  Java: 'openjdk',
-  'Spring Boot': 'springboot',
+  Java: 'coffeescript', // openjdk는 없음, coffeescript 또는 java 사용
+  'Spring Boot': 'spring',
   // Database
   PostgreSQL: 'postgresql',
   MySQL: 'mysql',
@@ -28,7 +28,7 @@ export const SKILL_ICON_SLUGS: Record<string, string> = {
   Docker: 'docker',
   AWS: 'amazonwebservices',
   GCP: 'googlecloud',
-  NCP: 'naver',
+  NCP: 'ncloud', // naver → ncloud
   'CI/CD': 'githubactions',
   Kubernetes: 'kubernetes',
   'GitHub Actions': 'githubactions',
@@ -46,9 +46,8 @@ export const SKILL_ICON_SLUGS: Record<string, string> = {
 export const getSkillIconUrl = (skill: string, isDark = false): string => {
   const slug = SKILL_ICON_SLUGS[skill];
   if (!slug) return '';
-  // 다크모드일 때는 흰색, 라이트모드일 때는 각 브랜드 색상
-  const color = isDark ? 'white' : undefined;
-  return `https://cdn.simpleicons.org/${slug}${color ? `/${color}` : ''}`;
+  // 다크모드에서도 브랜드 컬러 유지 (가독성 향상)
+  return `https://cdn.simpleicons.org/${slug}`;
 };
 
 export type SkillIconKey = keyof typeof SKILL_ICONS;

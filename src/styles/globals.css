@@ -164,6 +164,8 @@ body {
   --border-dark-alpha-50: rgba(71, 85, 105, 0.5);
   --bg-dark-alpha-30: rgba(30, 41, 59, 0.3);
   --bg-dark-alpha-50: rgba(30, 41, 59, 0.5);
+  --bg-light-on-dark: rgba(255, 255, 255, 0.5); /* Light background for dark mode */
+  --border-light-on-dark: rgba(255, 255, 255, 0.6);
 
   /* Skill Colors - Dark Mode (tertiary only changes) */
   --skill-tertiary-bg: rgba(71, 85, 105, 0.3);
