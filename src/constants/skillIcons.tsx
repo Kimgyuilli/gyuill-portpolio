@@ -15,7 +15,7 @@ const LOCAL_SKILL_IMAGES: Record<string, string> = {
   AWS: 'aws.png',
   'VS Code': 'vscode.png',
   Slack: 'slack.png',
-  vercel: 'vercel.png',
+  Vercel: 'vercel.png',
 };
 
 // Simple Icons CDN slug 매핑
@@ -40,7 +40,7 @@ export const SKILL_ICON_SLUGS: Record<string, string> = {
   NCP: 'naver',
   Kubernetes: 'kubernetes',
   'GitHub Actions': 'githubactions',
-  vercel: 'vercel',
+  Vercel: 'vercel',
   // Tools
   Git: 'git',
   'VS Code': 'visualstudiocode',
