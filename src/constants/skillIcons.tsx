@@ -9,6 +9,14 @@ export const SKILL_ICONS = {
   Tools: <Layout />,
 } as const;
 
+// 로컬 이미지를 사용하는 스킬들 (CDN에서 깨지는 경우)
+const LOCAL_SKILL_IMAGES: Record<string, string> = {
+  Java: 'java.png',
+  AWS: 'aws.png',
+  'VS Code': 'vscode.png',
+  Slack: 'slack.png',
+};
+
 // Simple Icons CDN slug 매핑
 export const SKILL_ICON_SLUGS: Record<string, string> = {
   // Frontend
@@ -18,7 +26,7 @@ export const SKILL_ICON_SLUGS: Record<string, string> = {
   // Backend
   Django: 'django',
   Python: 'python',
-  Java: 'coffeescript', // openjdk는 없음, coffeescript 또는 java 사용
+  Java: 'java',
   'Spring Boot': 'spring',
   // Database
   PostgreSQL: 'postgresql',
@@ -26,12 +34,12 @@ export const SKILL_ICON_SLUGS: Record<string, string> = {
   Redis: 'redis',
   // DevOps
   Docker: 'docker',
-  AWS: 'amazonwebservices',
+  AWS: 'amazonaws',
   GCP: 'googlecloud',
-  NCP: 'ncloud', // naver → ncloud
-  'CI/CD': 'githubactions',
+  NCP: 'naver',
   Kubernetes: 'kubernetes',
   'GitHub Actions': 'githubactions',
+  vercel: 'vercel',
   // Tools
   Git: 'git',
   'VS Code': 'visualstudiocode',
@@ -45,11 +53,17 @@ export const SKILL_ICON_SLUGS: Record<string, string> = {
   perplexity: 'perplexity',
 };
 
-// CDN 아이콘 URL 생성
+// 아이콘 URL 생성 (로컬 이미지 우선, 없으면 CDN 사용)
 export const getSkillIconUrl = (skill: string): string => {
+  // 로컬 이미지가 있는 경우 로컬 경로 반환
+  const localImage = LOCAL_SKILL_IMAGES[skill];
+  if (localImage) {
+    return `/images/skills/${localImage}`;
+  }
+
+  // CDN 아이콘 사용
   const slug = SKILL_ICON_SLUGS[skill];
   if (!slug) return '';
-  // 다크모드에서도 브랜드 컬러 유지 (가독성 향상)
   return `https://cdn.simpleicons.org/${slug}`;
 };
 

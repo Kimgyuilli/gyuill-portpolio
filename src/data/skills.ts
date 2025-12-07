@@ -20,7 +20,7 @@ export const skillCategories: SkillCategoryData[] = [
   },
   {
     title: 'DevOps',
-    skills: ['Docker', 'AWS', 'GCP', 'NCP', 'CI/CD', 'GitHub Actions'],
+    skills: ['Docker', 'AWS', 'GCP', 'NCP', 'GitHub Actions', 'Vercel'],
   },
   {
     title: 'Tools',
