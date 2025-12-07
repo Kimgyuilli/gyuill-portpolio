@@ -44,7 +44,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       // Remove transition class after animation completes
       setTimeout(() => {
         document.documentElement.classList.remove('theme-transition');
-      }, 300);
+      }, 1000);
     } else {
       // No animation for users who prefer reduced motion
       setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
