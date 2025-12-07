@@ -84,10 +84,6 @@
   margin-bottom: 0.25rem;
 }
 
-:global(.dark) .info-label {
-  color: rgb(100, 116, 139);
-}
-
 .info-value {
   color: rgb(51, 65, 85);
   font-size: 0.875rem;

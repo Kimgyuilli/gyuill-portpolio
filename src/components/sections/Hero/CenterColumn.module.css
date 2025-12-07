@@ -24,26 +24,6 @@
   color: rgb(203, 213, 225);
 }
 
-.section-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: rgb(15, 23, 42);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgb(16, 185, 129);
-}
-
-:global(.dark) .section-title {
-  color: rgb(241, 245, 249);
-  border-bottom-color: rgb(52, 211, 153);
-}
-
-.timeline-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
 .timeline-item {
   display: flex;
   gap: 1rem;

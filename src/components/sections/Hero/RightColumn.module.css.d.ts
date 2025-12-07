@@ -19,7 +19,6 @@ declare const styles: {
   readonly "project-info": string;
   readonly "project-tags": string;
   readonly "project-title": string;
-  readonly "section-title": string;
   readonly "skill-box": string;
   readonly "skill-name": string;
   readonly "skill-primary": string;
@@ -30,7 +29,6 @@ declare const styles: {
   readonly "tag": string;
   readonly "tag-blue": string;
   readonly "tag-emerald": string;
-  readonly "timeline-list": string;
 };
 export = styles;
 

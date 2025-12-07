@@ -1,6 +1,6 @@
 import { heroData } from '@/data/hero';
 import { experiences } from '@/data/experiences';
-import layoutStyles from './styles.module.css';
+import sharedStyles from './styles.module.css';
 import styles from './CenterColumn.module.css';
 
 export function CenterColumn() {
@@ -8,10 +8,10 @@ export function CenterColumn() {
   const activityExperiences = experiences.filter((exp) => exp.type === 'activity');
 
   return (
-    <div className={layoutStyles['center-column']}>
+    <div className={sharedStyles['center-column']}>
       {/* About Me */}
       <div className={styles['about-section']}>
-        <h2 className={styles['section-title']}>About Me</h2>
+        <h2 className={sharedStyles['section-title']}>About Me</h2>
         <div className={styles['about-paragraphs']}>
           {heroData.about.paragraphs.map((paragraph, index) => (
             <p key={index} className={styles['about-paragraph']}>
@@ -23,8 +23,8 @@ export function CenterColumn() {
 
       {/* 학력과 교육이력 */}
       <div>
-        <h2 className={styles['section-title']}>학력과 교육이력</h2>
-        <div className={styles['timeline-list']}>
+        <h2 className={sharedStyles['section-title']}>학력과 교육이력</h2>
+        <div className={sharedStyles['timeline-list']}>
           {heroData.education.map((edu, index) => (
             <div key={index} className={styles['timeline-item']}>
               <div className={styles['timeline-date']}>{edu.period}</div>
@@ -38,8 +38,8 @@ export function CenterColumn() {
 
       {/* 경력 */}
       <div>
-        <h2 className={styles['section-title']}>경력</h2>
-        <div className={styles['timeline-list']}>
+        <h2 className={sharedStyles['section-title']}>경력</h2>
+        <div className={sharedStyles['timeline-list']}>
           {careerExperiences.map((exp, index) => (
             <div key={index} className={styles['timeline-item']}>
               <div className={styles['timeline-date']}>{exp.period}</div>
@@ -54,8 +54,8 @@ export function CenterColumn() {
 
       {/* 활동 */}
       <div>
-        <h2 className={styles['section-title']}>활동</h2>
-        <div className={styles['timeline-list']}>
+        <h2 className={sharedStyles['section-title']}>활동</h2>
+        <div className={sharedStyles['timeline-list']}>
           {activityExperiences.map((exp, index) => (
             <div key={index} className={styles['timeline-item']}>
               <div className={styles['timeline-date']}>{exp.period}</div>
