@@ -120,15 +120,17 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <Github size={20} />
               <span>GitHub</span>
             </a>
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={contentStyles['action-button']}
-            >
-              <ExternalLink size={20} />
-              <span>Live Demo</span>
-            </a>
+            {project.demo && project.demo !== '#' && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={contentStyles['action-button']}
+              >
+                <ExternalLink size={20} />
+                <span>Live Demo</span>
+              </a>
+            )}
           </div>
         </div>
       </div>
