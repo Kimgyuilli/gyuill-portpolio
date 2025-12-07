@@ -132,7 +132,7 @@
 }
 
 .link-item:hover .link-icon {
-  background-color: rgba(148, 163, 184, 0.5);
+  background-color: var(--text-disabled);
 }
 
 :global(.dark) .link-item:hover .link-icon {
@@ -219,9 +219,9 @@
 }
 
 :global(.dark) .skill-tertiary {
-  background-color: rgba(71, 85, 105, 0.3);
-  color: var(--text-body);
-  border-color: rgba(71, 85, 105, 0.5);
+  background-color: var(--skill-tertiary-bg);
+  color: var(--skill-tertiary-text);
+  border-color: var(--skill-tertiary-border);
 }
 
 .skills-legend {
