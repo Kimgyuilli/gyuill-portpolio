@@ -42,10 +42,11 @@ body {
   --border-light: rgb(226, 232, 240);     /* Light borders - slate-200 */
   --border-medium: rgb(203, 213, 225);    /* Medium borders - slate-300 */
 
-  /* Accent Colors - Emerald (same for both modes) */
+  /* Accent Colors - Emerald */
   --accent-primary: rgb(16, 185, 129);    /* emerald-500 */
   --accent-hover: rgba(16, 185, 129, 0.2);/* emerald hover bg */
   --accent-border: rgba(16, 185, 129, 0.5);/* emerald border */
+  --accent-text: rgb(255, 255, 255);      /* Text on accent bg - white */
 
   /* Gradient Colors - Purple */
   --gradient-purple-1: rgb(168, 85, 247); /* purple-500 */
@@ -87,6 +88,7 @@ body {
   --accent-primary: rgb(52, 211, 153);    /* emerald-400 */
   --accent-hover: rgba(52, 211, 153, 0.2);/* emerald hover bg */
   --accent-border: rgba(52, 211, 153, 0.5);/* emerald border */
+  --accent-text: rgb(15, 23, 42);         /* Text on accent bg - dark slate */
 
   /* Gradient Colors - Purple (reversed for dark) */
   --gradient-purple-1: rgb(139, 92, 246); /* violet-500 */
