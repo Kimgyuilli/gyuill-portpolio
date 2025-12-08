@@ -1,6 +1,7 @@
 import { projects } from '@/data/projects';
 import { skillCategories } from '@/data/skills';
 import { SKILL_ICONS, getSkillIconUrl } from '@/constants/skillIcons';
+import { ImageWithFallback } from '@/components/common/ImageWithFallback';
 import sharedStyles from './styles.module.css';
 import styles from './RightColumn.module.css';
 
@@ -37,7 +38,7 @@ export function RightColumn() {
               <div className={styles['project-header']}>
                 {project.image && (
                   <div className={styles['project-image']}>
-                    <img src={project.image} alt={project.title} />
+                    <ImageWithFallback src={project.image} alt={project.title} />
                   </div>
                 )}
                 <div className={styles['project-info']}>
@@ -83,7 +84,11 @@ export function RightColumn() {
                     const iconUrl = getSkillIconUrl(skill);
                     return iconUrl ? (
                       <div key={skill} className={styles['skill-icon-wrapper']} title={skill}>
-                        <img src={iconUrl} alt={skill} className={styles['skill-icon-img']} />
+                        <ImageWithFallback
+                          src={iconUrl}
+                          alt={skill}
+                          className={styles['skill-icon-img']}
+                        />
                       </div>
                     ) : null;
                   })}
