@@ -1,5 +1,4 @@
 declare const styles: {
-  readonly "contact-info-section": string;
   readonly "contact-list": string;
   readonly "contact-section": string;
   readonly "container": string;

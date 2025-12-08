@@ -42,7 +42,7 @@ export function Contact() {
         <FadeInSection delay={0.2}>
           <div className={styles['content-grid']}>
             {/* Contact Info */}
-            <div className={styles['contact-info-section']}>
+            <div>
               <h3 className={styles['section-title']}>연락처 정보</h3>
 
               <div className={styles['contact-list']}>

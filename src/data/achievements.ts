@@ -7,14 +7,14 @@ export interface AchievementData {
 }
 
 export const achievements: AchievementData[] = [
-    {
+  {
     title: 'SOPT 37기 해커톤 웹 서비스 대상',
     issuer: 'SOPT',
     date: '2025.11.23',
     description: '육아일기를 아일랜드 설화로 만들어주는 서비스 개발로 대상 수상',
     link: 'https://github.com/SOPT-all/37-SOPKATHON-SERVER-WEB3',
   },
-    {
+  {
     title: 'Groomthon univ 경인지부 해커톤 9ITHON 최우수상',
     issuer: 'Groomthon univ 경인지부',
     date: '2025.07.13',

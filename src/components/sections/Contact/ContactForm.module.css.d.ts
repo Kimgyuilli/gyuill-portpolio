@@ -2,7 +2,6 @@ declare const styles: {
   readonly "error": string;
   readonly "form": string;
   readonly "form-group": string;
-  readonly "form-section": string;
   readonly "input": string;
   readonly "label": string;
   readonly "slideIn": string;
