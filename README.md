@@ -86,7 +86,7 @@
 ## 📁 프로젝트 구조
 
 ```
-gyuill-portpolio/
+gyuill-portfolio/
 ├── src/
 │   ├── assets/                 # 정적 리소스
 │   │   └── images/

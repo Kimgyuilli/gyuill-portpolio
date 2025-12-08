@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: mode === 'production' ? '/gyuill-portpolio/' : '/',
+  base: mode === 'production' ? '/gyuill-portfolio/' : '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
