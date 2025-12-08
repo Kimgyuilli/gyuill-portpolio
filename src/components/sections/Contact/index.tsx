@@ -9,7 +9,6 @@ import { mapWithIcons } from '@/utils/iconMapper';
 import styles from './styles.module.css';
 
 export function Contact() {
-
   const contactInfo = useMemo(
     () =>
       mapWithIcons(contactInfoData, (info) => info.label, CONTACT_ICONS).map((item) => ({
