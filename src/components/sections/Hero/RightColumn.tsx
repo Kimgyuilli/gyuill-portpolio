@@ -68,24 +68,29 @@ export function RightColumn() {
       <div>
         <h2 className={sharedStyles['section-title']}>Skills</h2>
         <div className={styles['skills-container']}>
-          {skillCategories.map((category) => (
-            <div key={category.title} className={styles['skill-category']}>
-              <div className={styles['category-header']}>
-                <div className={styles['category-icon']}>{SKILL_ICONS[category.title]}</div>
-                <h3 className={styles['category-title']}>{category.title}</h3>
+          {skillCategories.map((category) => {
+            const Icon = SKILL_ICONS[category.title];
+            return (
+              <div key={category.title} className={styles['skill-category']}>
+                <div className={styles['category-header']}>
+                  <div className={styles['category-icon']}>
+                    <Icon size={20} />
+                  </div>
+                  <h3 className={styles['category-title']}>{category.title}</h3>
+                </div>
+                <div className={styles['skill-icons-grid']}>
+                  {category.skills.map((skill) => {
+                    const iconUrl = getSkillIconUrl(skill);
+                    return iconUrl ? (
+                      <div key={skill} className={styles['skill-icon-wrapper']} title={skill}>
+                        <img src={iconUrl} alt={skill} className={styles['skill-icon-img']} />
+                      </div>
+                    ) : null;
+                  })}
+                </div>
               </div>
-              <div className={styles['skill-icons-grid']}>
-                {category.skills.map((skill) => {
-                  const iconUrl = getSkillIconUrl(skill);
-                  return iconUrl ? (
-                    <div key={skill} className={styles['skill-icon-wrapper']} title={skill}>
-                      <img src={iconUrl} alt={skill} className={styles['skill-icon-img']} />
-                    </div>
-                  ) : null;
-                })}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

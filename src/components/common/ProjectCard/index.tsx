@@ -1,4 +1,5 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { SiGithub } from 'react-icons/si';
 import { ImageWithFallback } from '../ImageWithFallback';
 import type { Project } from '@/types';
 import styles from './styles.module.css';
@@ -39,7 +40,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
 
         <div className={styles.links}>
           <a href={project.github} className={styles.link} onClick={handleLinkClick}>
-            <Github size={18} />
+            <SiGithub size={18} />
             <span>Code</span>
           </a>
           {project.demo && project.demo !== '#' && (

@@ -8,7 +8,11 @@ import styles from './styles.module.css';
 
 export function Skills() {
   const categoriesWithIcons = useMemo(
-    () => mapWithIcons(skillCategories, (cat) => cat.title, SKILL_ICONS),
+    () =>
+      mapWithIcons(skillCategories, (cat) => cat.title, SKILL_ICONS).map((item) => ({
+        ...item,
+        icon: <item.icon size={24} />,
+      })),
     []
   );
 
