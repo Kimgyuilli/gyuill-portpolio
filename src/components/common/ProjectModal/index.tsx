@@ -1,4 +1,5 @@
-import { X, Github, ExternalLink, Calendar, Users, Briefcase } from 'lucide-react';
+import { X, ExternalLink, Calendar, Users, Briefcase } from 'lucide-react';
+import { SiGithub } from 'react-icons/si';
 import { useEffect } from 'react';
 import type { Project } from '@/types';
 import { ImageWithFallback } from '../ImageWithFallback';
@@ -117,7 +118,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               rel="noopener noreferrer"
               className={contentStyles['action-button']}
             >
-              <Github size={20} />
+              <SiGithub size={20} />
               <span>GitHub</span>
             </a>
             {project.demo && project.demo !== '#' && (
