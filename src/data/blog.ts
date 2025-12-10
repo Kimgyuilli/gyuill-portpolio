@@ -2,6 +2,14 @@ import { BlogPost } from '@/types';
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "나만의 개발자 포트폴리오 웹사이트 제작기",
+    summary: "프로젝트 시작 배경\n올해가 다 지나가고 있는 와중 학교에서의 마지막 시험을 끝내게 되었다. 물론 졸업 논문도 써야 하지만 다음 일정 전에 시간이 남아서 전부터 하고 싶었던 나만의 ...",
+    date: '2025.12.09',
+    image: "https://blog.kakaocdn.net/dn/5csj1/dJMcab3MIqv/vS1LrzTXws8rjS16ecXyEK/img.png",
+    link: "https://imdeepskyblue.tistory.com/71",
+    tags: ["회고","개발","웹사이트"],
+  },
+  {
     title: "AWS ECS가 누구세요",
     summary: "AWS ECS(Elastic Container Service)는 AWS에서 제공하는 완전 관리형 컨테이너 오케스트레이션 서비스입니다. Docker 컨테이너를 쉽게 배포하고 운영할 ...",
     date: '2025.12.05',
@@ -16,13 +24,5 @@ export const blogPosts: BlogPost[] = [
     image: "https://blog.kakaocdn.net/dn/urUfe/dJMcaiV4hLE/OOPxKWYPCpBtUs29nAO9sK/img.png",
     link: "https://imdeepskyblue.tistory.com/69",
     tags: ["개발 지식/aws","aws","Elastic Beanstalk"],
-  },
-  {
-    title: "GitHub 프로필에 Tistory 최신 포스트 업데이트하기",
-    summary: "들어가며\nGitHub 프로필 README는 개발자의 첫인상을 결정하는 중요한 공간입니다. 많은 개발자들이 자신의 기술 스택, 프로젝트, 통계를 표시하지만, 기술 블로그를 운영한다면...",
-    date: '2025.11.27',
-    image: "https://blog.kakaocdn.net/dn/Ql5I9/dJMcafSz5wP/psb2meab178LEikUhYwrl1/img.png",
-    link: "https://imdeepskyblue.tistory.com/68",
-    tags: ["개발 지식/Git","git","Github"],
   }
 ];
